@@ -1,0 +1,73 @@
+object Telefon: TTelefon
+  Left = 605
+  Height = 400
+  Top = 179
+  Width = 700
+  BorderStyle = bsToolWindow
+  Caption = 'Телефонный справочник'
+  ClientHeight = 400
+  ClientWidth = 700
+  Constraints.MinHeight = 400
+  Constraints.MinWidth = 700
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object bAdd: TSpeedButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 0
+    Height = 32
+    Top = 0
+    Width = 172
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Добавить контакт'
+    OnClick = bAddClick
+  end
+  object bEdit: TSpeedButton
+    AnchorSideLeft.Control = bAdd
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 172
+    Height = 32
+    Top = 0
+    Width = 180
+    Caption = 'Редактировать контакт'
+    OnClick = bEditClick
+  end
+  object bDel: TSpeedButton
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 352
+    Height = 32
+    Top = 0
+    Width = 172
+    Anchors = [akTop, akRight]
+    Caption = 'Удалить контакт'
+    OnClick = bDelClick
+  end
+  object bSort: TSpeedButton
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 524
+    Height = 32
+    Top = 0
+    Width = 176
+    Anchors = [akTop, akRight]
+    Caption = 'Сортировать список'
+    OnClick = bSortClick
+  end
+  object SG: TStringGrid
+    Left = 0
+    Height = 368
+    Top = 32
+    Width = 700
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ColCount = 3
+    FixedCols = 0
+    RowCount = 1
+    TabOrder = 0
+  end
+end
